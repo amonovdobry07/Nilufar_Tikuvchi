@@ -1,0 +1,386 @@
+.mpB{
+  padding-top: 120px;
+  padding-bottom: 70px;
+
+  background: white;
+}
+
+.mpB__container{
+  width: min(var(--container), 92%);
+  margin: 0 auto;
+}
+
+.mpB__head{
+  text-align:center;
+  margin-bottom: 44px;
+}
+
+.mpB__kicker{
+  margin: 0 0 10px;
+  font-family: "Cormorant Garamond", Georgia, serif;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  font-size: 12px;
+  color: var(--primary);
+}
+
+.mpB__title{
+  margin: 0;
+  font-size: 60px;
+  font-weight: 300;
+  color: rgba(31,42,53,.92);
+}
+
+.mpB__subtitle{
+  margin: 18px auto 0;
+  max-width: 760px;
+  font-size: 14px;
+  line-height: 1.8;
+  color: rgba(31,42,53,.62);
+}
+
+.mpB__div{ margin: 18px auto 0; }
+
+/* =======================
+   CATALOG CARDS (LIST)
+   ======================= */
+.mpBCatalog{
+  display:grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px;
+}
+
+.mpBCard{
+  display:grid;
+  grid-template-columns: 1.25fr .75fr;
+  gap: 14px;
+  align-items: stretch;
+
+  background: rgba(255,255,255,.62);
+  border: 1px solid rgba(31,42,53,.12);
+  border-radius: 18px;
+  overflow:hidden;
+
+  box-shadow: 0 18px 40px rgba(0,0,0,.06);
+  transition: 260ms ease;
+}
+
+.mpBCard:hover{
+  transform: translateY(-2px);
+  border-color: rgba(197,164,109,.40);
+}
+
+.mpBCard__left{
+  padding: 18px 18px 18px 18px;
+}
+
+.mpBCard__cap{
+  display:flex;
+  align-items:center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.mpBCard__mark{
+  font-family: "Cormorant Garamond", Georgia, serif;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  font-size: 11px;
+  color: rgba(197,164,109,.96);
+}
+
+.mpBCard__name{
+  margin: 0 0 8px;
+  font-size: 30px;
+  font-weight: 400;
+  color: rgba(31,42,53,.92);
+}
+
+.mpBCard__meta{
+  margin: 0 0 10px;
+  font-size: 13px;
+  color: rgba(31,42,53,.60);
+}
+
+.mpBCard__note{
+  margin: 0 0 14px;
+  font-size: 13px;
+  line-height: 1.7;
+  color: rgba(31,42,53,.62);
+  max-width: 520px;
+}
+
+.mpBCard__actions{
+  display:flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.mpBBtn{
+  height: 44px;
+  padding: 0 14px;
+  border-radius: 12px;
+
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+
+  text-decoration:none;
+  font-family: Inter, system-ui, sans-serif;
+  font-weight: 600;
+  letter-spacing: 1px;
+  border: 1px solid rgba(31,42,53,.12);
+  transition: 240ms ease;
+}
+
+.mpBBtn--gold{
+  background: rgba(197,164,109,.96);
+  border-color: rgba(197,164,109,.96);
+  color: #fff7ea;
+  box-shadow: 0 14px 26px rgba(197,164,109,.18);
+}
+.mpBBtn--gold:hover{ transform: translateY(-1px); }
+
+.mpBBtn--line{
+  background: rgba(255,255,255,.72);
+  color: rgba(31,42,53,.86);
+}
+.mpBBtn--line:hover{
+  border-color: rgba(197,164,109,.35);
+  transform: translateY(-1px);
+}
+
+.mpBCard__right{
+  position: relative;
+  padding: 12px 12px 12px 0;
+}
+
+.mpBCard__thumb{
+  height: 100%;
+  border-radius: 16px;
+  overflow:hidden;
+}
+
+.mpBCard__thumb img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: scale(1.02);
+  transition: 700ms ease;
+  filter: saturate(1.02) contrast(1.02);
+}
+
+.mpBCard:hover .mpBCard__thumb img{
+  transform: scale(1.08);
+}
+
+/* Hint */
+.mpBHint{ margin-top: 18px; }
+.mpBHint__box{
+  background: rgba(255,255,255,.62);
+  border: 1px solid rgba(31,42,53,.12);
+  border-radius: 18px;
+  padding: 16px;
+  box-shadow: 0 18px 40px rgba(0,0,0,.06);
+}
+.mpBHint__t{
+  margin: 0 0 6px;
+  font-family: "Cormorant Garamond", Georgia, serif;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  font-size: 12px;
+  color: rgba(197,164,109,.96);
+}
+.mpBHint__d{
+  margin: 0;
+  font-size: 13px;
+  line-height: 1.7;
+  color: rgba(31,42,53,.62);
+}
+
+/* =======================
+   DETAIL HEADER
+   ======================= */
+.mpD__head{
+  display:flex;
+  align-items:flex-end;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.mpD__title{
+  margin: 0;
+  font-size: 52px;
+  font-weight: 300;
+  color: rgba(31,42,53,.92);
+}
+
+.mpD__subtitle{
+  margin: 10px 0 0;
+  font-size: 13px;
+  color: rgba(31,42,53,.62);
+}
+
+.mpD__tools{
+  display:flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.mpD__back,
+.mpD__site{
+  height: 44px;
+  padding: 0 14px;
+  border-radius: 999px;
+
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+
+  text-decoration:none;
+  font-family: Inter, system-ui, sans-serif;
+  font-weight: 700;
+  letter-spacing: 1px;
+
+  background: rgba(255,255,255,.72);
+  border: 1px solid rgba(31,42,53,.12);
+  color: rgba(31,42,53,.78);
+  transition: 240ms ease;
+}
+
+.mpD__back:hover,
+.mpD__site:hover{
+  transform: translateY(-1px);
+  border-color: rgba(197,164,109,.35);
+}
+
+/* =======================
+   DETAIL GRID (PRODUCTS)
+   ======================= */
+.mpDGrid{
+  margin-top: 22px;
+  display:grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.mpDCard{
+  text-decoration:none;
+  border-radius: 16px;
+  overflow: hidden;
+
+  background: rgba(255,255,255,.62);
+  border: 1px solid rgba(31,42,53,.12);
+  box-shadow: 0 18px 40px rgba(0,0,0,.06);
+  transition: 260ms ease;
+}
+
+.mpDCard:hover{
+  transform: translateY(-2px);
+  border-color: rgba(197,164,109,.35);
+}
+
+.mpDCard__img{
+  position: relative;
+  height: 200px;
+}
+
+.mpDCard__img img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: scale(1.02);
+  transition: 700ms ease;
+}
+
+.mpDCard:hover .mpDCard__img img{
+  transform: scale(1.08);
+}
+
+.mpDCard__tag{
+  position:absolute;
+  left: 12px;
+  top: 12px;
+  padding: 8px 10px;
+  border-radius: 999px;
+
+  background: rgba(242,237,228,.78);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(31,42,53,.10);
+
+  font-family: "Cormorant Garamond", Georgia, serif;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  font-size: 11px;
+  color: rgba(31,42,53,.80);
+}
+
+.mpDCard__body{
+  padding: 14px 14px 16px;
+}
+
+.mpDCard__title{
+  margin: 0 0 8px;
+  font-size: 20px;
+  font-weight: 400;
+  color: rgba(31,42,53,.92);
+}
+
+.mpDCard__desc{
+  margin: 0 0 10px;
+  font-size: 13px;
+  line-height: 1.65;
+  color: rgba(31,42,53,.62);
+}
+
+.mpDCard__price{
+  margin: 0;
+  color: rgba(197,164,109,.98);
+  font-size: 14px;
+  letter-spacing: 1px;
+}
+
+.mpDCard__more{
+  margin-top: 12px;
+  display:flex;
+  align-items:center;
+  justify-content: space-between;
+  padding-top: 10px;
+  border-top: 1px solid rgba(31,42,53,.10);
+
+  color: rgba(31,42,53,.68);
+  font-family: "Cormorant Garamond", Georgia, serif;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  font-size: 11px;
+}
+
+.mpDCard__arrow{
+  color: rgba(197,164,109,.95);
+  font-size: 16px;
+}
+
+/* Responsive */
+@media (max-width: 1100px){
+  .mpBCatalog{ grid-template-columns: 1fr; }
+  .mpDGrid{ grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 680px){
+  .mpB__title{ font-size: 46px; }
+  .mpD__title{ font-size: 42px; }
+
+  .mpBCard{
+    grid-template-columns: 1fr;
+  }
+  .mpBCard__right{
+    padding: 0 18px 18px;
+  }
+  .mpBCard__thumb{
+    height: 180px;
+  }
+
+  .mpDGrid{ grid-template-columns: 1fr; }
+  .mpDCard__img{ height: 180px; }
+}
