@@ -1,164 +1,361 @@
 .ft{
-  margin-top: auto; /* sticky footer */
-  padding: 56px 0 22px;
+  margin-top: auto;
+  padding: 70px 0 26px;
+  position: relative;
+  overflow: hidden;
 
-  /* ✅ Majburiy: footer fonini aniq qilib qo'yamiz */
-  background: #f2ede4;
+  /* Atlas shine + iliq krem fon */
+  background:
+    radial-gradient(1200px 500px at 20% 10%, rgba(255,255,255,.70), transparent 55%),
+    radial-gradient(900px 420px at 80% 35%, rgba(197,164,109,.18), transparent 60%),
+    radial-gradient(900px 520px at 35% 95%, rgba(197,164,109,.10), transparent 55%),
+    linear-gradient(180deg, #f7f1e7 0%, #f1eadf 55%, #eee6d8 100%);
   color: rgba(31,42,53,.88);
 
   border-top: 1px solid rgba(31,42,53,.10);
-  position: relative;
-  overflow: hidden;
 }
 
-/* ✅ Oldingi qora overlaylarni yo'q qilamiz */
-.ft::before,
-.ft::after{
+/* Ikat to‘lqin naqsh (subtle) */
+.ft::before{
   content:"";
   position:absolute;
-  inset: 0;
+  inset: -40px;
   pointer-events:none;
-}
-
-/* Nozik “gold glow” */
-.ft::before{
-  background:
-    radial-gradient(circle at 20% 10%, rgba(197,164,109,.14), transparent 55%),
-    radial-gradient(circle at 80% 60%, rgba(197,164,109,.10), transparent 58%);
-  opacity: 1;
-}
-
-/* Naqsh (juda yengil) */
-.ft::after{
   opacity: .55;
-  background-image: url("data:image/svg+xml,%3Csvg width='84' height='84' viewBox='0 0 84 84' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' stroke='%23C5A46D' stroke-opacity='0.08' stroke-width='1'%3E%3Cpath d='M42 0L84 42L42 84L0 42Z'/%3E%3Cpath d='M42 14L70 42L42 70L14 42Z'/%3E%3C/g%3E%3C/svg%3E");
-  background-size: 84px 84px;
+  background-image: url("data:image/svg+xml,%3Csvg width='240' height='160' viewBox='0 0 240 160' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' stroke='%23C5A46D' stroke-opacity='0.08' stroke-width='2'%3E%3Cpath d='M0 40 C30 10 60 10 90 40 S150 70 180 40 S210 10 240 40'/%3E%3Cpath d='M0 90 C30 60 60 60 90 90 S150 120 180 90 S210 60 240 90'/%3E%3Cpath d='M0 140 C30 110 60 110 90 140 S150 170 180 140 S210 110 240 140'/%3E%3C/g%3E%3C/svg%3E");
+  background-size: 240px 160px;
+  filter: blur(.15px);
 }
+
+/* Yuqorida atlas “glint line” */
 
 .ft__container{
   width: min(var(--container, 1200px), 92%);
   margin: 0 auto;
-  position: relative; /* overlay ustidan chiqishi uchun */
+  position: relative;
   z-index: 1;
 }
 
 .ft__top{
   display: grid;
-  grid-template-columns: 1.4fr 1fr 1.2fr;
-  gap: 34px;
+  grid-template-columns: 1.55fr 1fr 1.2fr;
+  gap: 46px;
   align-items: start;
 }
 
 /* Brand */
-.ft__logo{
-  font-family: "Cormorant Garamond", Georgia, serif;
-  font-size: 24px;
-  letter-spacing: 8px;
-  text-transform: uppercase;
-  color: rgba(31,42,53,.92);
+.ft__brand{
+  position: relative;
 }
 
+.ft__logo{
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: 32px;
+  letter-spacing: 11px;
+  text-transform: uppercase;
+  line-height: 1.05;
+  color: rgba(31,42,53,.95);
+}
+
+
 .ft__desc{
-  margin: 12px 0 14px;
-  font-size: 13px;
-  line-height: 1.75;
-  color: rgba(31,42,53,.62);
-  max-width: 520px;
+  margin: 14px 0 18px;
+  font-size: 15px;
+  line-height: 1.9;
+  color: rgba(31,42,53,.68);
+  max-width: 560px;
 }
 
 .ft__mini{
   display:flex;
   flex-wrap: wrap;
   gap: 10px;
-  font-size: 12px;
-  color: rgba(31,42,53,.60);
+  font-size: 13px;
+  color: rgba(31,42,53,.64);
+}
+
+.ft__mini span{
+  background: rgba(255,255,255,.58);
+  border: 1px solid rgba(31,42,53,.10);
+  padding: 8px 11px;
+  border-radius: 999px;
+  backdrop-filter: blur(8px);
+  box-shadow: 0 10px 22px rgba(31,42,53,.06);
 }
 
 /* Cols */
 .ft__col{
   display:flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 12px;
+  position: relative;
 }
+
+/* Ustunlar orasiga yengil separator */
+.ft__col::before{
+  content:"";
+  position:absolute;
+  left: -22px;
+  top: 8px;
+  bottom: 8px;
+  width: 1px;
+  background: linear-gradient(
+    180deg,
+    rgba(197,164,109,.0) 0%,
+    rgba(197,164,109,.26) 25%,
+    rgba(197,164,109,.18) 75%,
+    rgba(197,164,109,.0) 100%
+  );
+  opacity: .9;
+}
+.ft__col:first-of-type::before{ display:none; }
 
 .ft__title{
   font-family: "Cormorant Garamond", Georgia, serif;
-  letter-spacing: 4px;
+  letter-spacing: 6px;
   text-transform: uppercase;
-  font-size: 12px;
-  color: rgba(197,164,109,.95);
-  margin: 4px 0 8px;
+  font-size: 13px;
+  margin: 0 0 8px;
+  color: rgba(197,164,109,.98);
 }
 
+/* Link: kattaroq + atlas glint hover */
 .ft__link{
   text-decoration: none;
-  color: rgba(31,42,53,.72);
-  font-size: 13px;
-  transition: 200ms ease;
+  font-size: 15px;
+  line-height: 1.55;
+  color: rgba(31,42,53,.78);
+  width: fit-content;
+  position: relative;
+  transition: 220ms ease;
 }
 
+/* underline */
+.ft__link::after{
+  content:"";
+  position:absolute;
+  left: 0;
+  bottom: -4px;
+  height: 2px;
+  width: 0%;
+  border-radius: 999px;
+  background: linear-gradient(
+    90deg,
+    rgba(197,164,109,0) 0%,
+    rgba(197,164,109,.90) 35%,
+    rgba(255,255,255,.95) 50%,
+    rgba(197,164,109,.90) 65%,
+    rgba(197,164,109,0) 100%
+  );
+  opacity: .95;
+  transition: 260ms ease;
+}
+
+/* glint */
 .ft__link:hover{
-  color: rgba(31,42,53,.92);
+  color: rgba(31,42,53,.96);
+  transform: translateY(-1px);
 }
-
-/* Buttons */
-.ft__cta{
-  display: grid;
-  gap: 10px;
-  margin-top: 10px;
-}
-
-.ft__btn{
-  height: 46px;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  border-radius: 12px;
-  text-decoration:none;
-  font-family: Inter, system-ui, sans-serif;
-  font-weight: 600;
-  letter-spacing: 1px;
-  border: 1px solid rgba(31,42,53,.12);
-}
-
-.ft__btn--gold{
-  background: rgba(197,164,109,.96);
-  border-color: rgba(197,164,109,.96);
-  color: #fff7ea;
-  box-shadow: 0 14px 26px rgba(197,164,109,.20);
-}
-
-.ft__btn--line{
-  background: rgba(255,255,255,.70);
-  color: rgba(31,42,53,.88);
+.ft__link:hover::after{
+  width: 100%;
 }
 
 /* Bottom */
 .ft__bottom{
-  margin-top: 30px;
-  padding-top: 16px;
+  margin-top: 42px;
+  padding-top: 18px;
   border-top: 1px solid rgba(31,42,53,.10);
+
   display:flex;
   justify-content: space-between;
   align-items: center;
-  gap: 12px;
+  gap: 14px;
   flex-wrap: wrap;
-  color: rgba(31,42,53,.55);
-  font-size: 12px;
+
+  color: rgba(31,42,53,.64);
+  font-size: 13px;
+}
+
+.ft__copy{
+  letter-spacing: .2px;
+}
+
+/* “Designed by” kartochka */
+.ft__made{
+  text-align: right;
+  background: rgba(255,255,255,.56);
+  border: 1px solid rgba(31,42,53,.10);
+  padding: 10px 12px;
+  border-radius: 16px;
+  backdrop-filter: blur(10px);
+  line-height: 1.35;
+  box-shadow: 0 14px 28px rgba(31,42,53,.07);
 }
 
 .ft__gold{
-  color: rgba(197,164,109,.98);
+  color: rgba(197,164,109,.99);
   letter-spacing: 1px;
 }
 
 /* Responsive */
 @media (max-width: 980px){
+  .ft{
+    padding: 56px 0 22px;
+  }
+
   .ft__top{
     grid-template-columns: 1fr;
-    gap: 24px;
+    gap: 26px;
   }
-  .ft{
-    padding: 44px 0 18px;
+
+  .ft__col::before{
+    display:none;
+  }
+
+  .ft__made{
+    text-align: left;
+    width: 100%;
+  }
+
+  .ft__logo{
+    font-size: 29px;
+    letter-spacing: 10px;
+  }
+
+  .ft__desc{
+    font-size: 14px;
+  }
+
+  .ft__link{
+    font-size: 14.5px;
+  }
+}
+
+
+/* Brand */
+.ft__logo{
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: 40px;          /* 32 -> 40 */
+  font-weight: 600;
+  letter-spacing: 10px;     /* 11 -> 10 (kattalashganda yumshoqroq) */
+  text-transform: uppercase;
+  line-height: 1.05;
+  color: rgba(31,42,53,.95);
+}
+
+/* Brand text */
+.ft__desc{
+  margin: 16px 0 20px;
+  font-size: 17px;          /* 15 -> 17 */
+  font-weight: 450;
+  line-height: 1.95;
+  color: rgba(31,42,53,.70);
+  max-width: 620px;         /* 560 -> 620 */
+}
+
+/* Mini tags */
+.ft__mini{
+  display:flex;
+  flex-wrap: wrap;
+  gap: 12px;                /* 10 -> 12 */
+  font-size: 14px;          /* 13 -> 14 */
+  font-weight: 500;
+  color: rgba(31,42,53,.68);
+}
+
+.ft__mini span{
+  background: rgba(255,255,255,.62);
+  border: 1px solid rgba(31,42,53,.10);
+  padding: 9px 13px;        /* 8/11 -> 9/13 */
+  border-radius: 999px;
+  backdrop-filter: blur(8px);
+  box-shadow: 0 10px 22px rgba(31,42,53,.06);
+}
+
+/* Titles */
+.ft__title{
+  font-family: "Cormorant Garamond", Georgia, serif;
+  letter-spacing: 7px;      /* 6 -> 7 */
+  text-transform: uppercase;
+  font-size: 15px;          /* 13 -> 15 */
+  font-weight: 700;
+  margin: 0 0 10px;
+  color: rgba(197,164,109,.98);
+}
+
+/* Links */
+.ft__link{
+  text-decoration: none;
+  font-size: 16.5px;        /* 15 -> 16.5 */
+  font-weight: 500;
+  line-height: 1.7;
+  color: rgba(31,42,53,.80);
+  width: fit-content;
+  position: relative;
+  transition: 220ms ease;
+}
+
+/* Bottom */
+.ft__bottom{
+  margin-top: 46px;         /* 42 -> 46 */
+  padding-top: 20px;        /* 18 -> 20 */
+  border-top: 1px solid rgba(31,42,53,.10);
+
+  display:flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 14px;
+  flex-wrap: wrap;
+
+  color: rgba(31,42,53,.66);
+  font-size: 14px;          /* 13 -> 14 */
+}
+
+.ft__copy{
+  letter-spacing: .3px;
+  font-weight: 500;
+}
+
+.ft__made{
+  text-align: right;
+  background: rgba(255,255,255,.60);
+  border: 1px solid rgba(31,42,53,.10);
+  padding: 12px 14px;       /* 10/12 -> 12/14 */
+  border-radius: 16px;
+  backdrop-filter: blur(10px);
+  line-height: 1.45;        /* 1.35 -> 1.45 */
+  font-size: 14px;          /* qo‘shildi */
+  font-weight: 500;
+  box-shadow: 0 14px 28px rgba(31,42,53,.07);
+}
+
+.ft__gold{
+  color: rgba(197,164,109,.99);
+  letter-spacing: 1.2px;
+  font-weight: 700;
+}
+
+/* Responsive */
+@media (max-width: 980px){
+  .ft__logo{
+    font-size: 34px;        /* 29 -> 34 */
+    letter-spacing: 9px;    /* 10 -> 9 */
+  }
+
+  .ft__desc{
+    font-size: 15.5px;      /* 14 -> 15.5 */
+  }
+
+  .ft__title{
+    font-size: 14px;        /* qo‘shildi */
+    letter-spacing: 6px;
+  }
+
+  .ft__link{
+    font-size: 15.5px;      /* 14.5 -> 15.5 */
+  }
+
+  .ft__bottom{
+    font-size: 13.5px;
   }
 }

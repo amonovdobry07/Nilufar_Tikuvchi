@@ -1,23 +1,41 @@
 /* === LUX NAVBAR (glass + blur) === */
 
+/* Theme vars (bodyga mos) */
+:root{
+  --ink: rgba(31,42,53,.88);
+  --ink-soft: rgba(31,42,53,.70);
+
+  --paper: 242,237,228;   /* beige */
+  --gold: 197,164,109;    /* tilla */
+}
+
+/* Navbar */
 .navlux{
   position: fixed;
   inset: 0 0 auto 0;
   z-index: 9999;
 
-  /* top holat */
-  background: rgba(242, 237, 228, 0.40);
-  backdrop-filter: blur(14px);
-  -webkit-backdrop-filter: blur(14px);
+  /* ✅ top holat: tekis rang emas, bodyga mos yumshoq gradient */
+  background: linear-gradient(
+    to bottom,
+    rgba(var(--paper), .55),
+    rgba(var(--paper), .38)
+  );
+
+  backdrop-filter: blur(16px) saturate(120%);
+  -webkit-backdrop-filter: blur(16px) saturate(120%);
 
   border-bottom: 1px solid rgba(31,42,53,.08);
   transition: 240ms ease;
 }
 
 .navlux--scrolled{
-  background: rgba(242, 237, 228, 0.72);
-  border-bottom: 1px solid rgba(31,42,53,.12);
-  box-shadow: 0 14px 40px rgba(0,0,0,.08);
+  /* ✅ scroll holat: “qopol panel” emas, chuqurroq lekin muloyim */
+  border-bottom: 1px solid rgba(31,42,53,.10);
+
+  box-shadow:
+    0 10px 28px rgba(0,0,0,.06),
+    0 2px 0 rgba(var(--gold), .10) inset;
 }
 
 .navlux::after{
@@ -27,10 +45,14 @@
   left:0; right:0; bottom:-1px;
   height: 18px;
   pointer-events:none;
-  opacity: .35;
+
+  /* ✅ muloyimroq */
+  opacity: .22;
+
   background-image:
-    linear-gradient(to bottom, rgba(197,164,109,.18), rgba(197,164,109,0)),
+    linear-gradient(to bottom, rgba(var(--gold), .18), rgba(var(--gold),0)),
     url("data:image/svg+xml,%3Csvg width='84' height='20' viewBox='0 0 84 20' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' stroke='%23C5A46D' stroke-opacity='0.22' stroke-width='1'%3E%3Cpath d='M42 0L84 10L42 20L0 10Z'/%3E%3C/g%3E%3C/svg%3E");
+
   background-size: 100% 100%, 84px 20px;
   background-repeat: no-repeat, repeat;
 }
@@ -49,10 +71,13 @@
   justify-self: start;
   text-decoration: none;
   font-family: "Cormorant Garamond", Georgia, serif;
-  font-size: 28px;
-  letter-spacing: 8px;
+
+  /* ✅ kattaroq va chiroyliroq */
+  font-size: 30px;
+  letter-spacing: 7px;
+
   text-transform: uppercase;
-  color: rgba(31,42,53,.88);
+  color: var(--ink);
 }
 
 /* links */
@@ -68,11 +93,14 @@
   text-decoration:none;
 
   font-family: "Cormorant Garamond", Georgia, serif;
-  font-size: 12px;
-  letter-spacing: 4px;
+
+  /* ✅ kattaroq + o‘qilishi yumshoqroq */
+  font-size: 14px;
+  letter-spacing: 3px;
+  top: 2px;
   text-transform: uppercase;
 
-  color: rgba(31,42,53,.66);
+  color: rgba(31,42,53,.68);
   padding: 8px 2px;
   transition: 220ms ease;
 }
@@ -86,9 +114,12 @@
   position:absolute;
   left:0;
   right:0;
-  bottom: 2px;
-  height: 1px;
-  background: rgba(197,164,109,.90);
+
+  /* ✅ premium underline */
+  bottom: 1px;
+  height: 2px;
+
+  background: rgba(var(--gold), .90);
   transform: scaleX(0);
   transform-origin: left;
   transition: 240ms ease;
@@ -116,15 +147,24 @@
   padding: 10px 14px;
   border-radius: 999px;
 
-  background: rgba(255,255,255,.52);
-  border: 1px solid rgba(31,42,53,.12);
-  box-shadow: 0 8px 22px rgba(0,0,0,.06);
+  /* ✅ bodyga mos pill */
+  background: linear-gradient(
+    to bottom,
+    rgba(255,255,255,.55),
+    rgba(255,255,255,.40)
+  );
+  border: 1px solid rgba(31,42,53,.10);
+  box-shadow: 0 8px 20px rgba(0,0,0,.05);
 
   transition: 220ms ease;
 }
 
 .navlux--scrolled .navlux__lang{
-  background: rgba(255,255,255,.66);
+  background: linear-gradient(
+    to bottom,
+    rgba(255,255,255,.62),
+    rgba(255,255,255,.46)
+  );
 }
 
 .navlux__globe{ font-size: 14px; opacity: .75; }
@@ -135,10 +175,12 @@
   background: transparent;
 
   font-family: Inter, system-ui, sans-serif;
-  font-size: 12px;
-  letter-spacing: 2px;
-  text-transform: uppercase;
 
+  /* ✅ biroz kattaroq */
+  font-size: 13px;
+  letter-spacing: 1.5px;
+
+  text-transform: uppercase;
   color: rgba(31,42,53,.90);
   cursor: pointer;
 }
@@ -171,7 +213,7 @@
 
 .navlux__burger:hover{
   transform: translateY(-1px);
-  border-color: rgba(197,164,109,.35);
+  border-color: rgba(var(--gold), .35);
 }
 
 /* responsive */
@@ -228,7 +270,7 @@
   height: 100%;
   margin-left: auto;
 
-  background: rgba(242, 237, 228, 0.92);
+  background: rgba(var(--paper), 0.92);
   border-left: 1px solid rgba(31,42,53,.12);
   box-shadow: -24px 0 60px rgba(0,0,0,.18);
 
@@ -291,7 +333,7 @@
 }
 
 .mnavpro__list a:hover{
-  border-color: rgba(197,164,109,.35);
+  border-color: rgba(var(--gold), .35);
   transform: translateY(-1px);
 }
 
@@ -344,3 +386,5 @@
 @media (min-width: 981px){
   .mnavpro{ display: none !important; }
 }
+
+

@@ -1,6 +1,8 @@
 import { useMemo, useState } from "react";
 import "../assets/Styles/Aloqa.scss";
-
+import { FaInstagram } from "react-icons/fa";
+import { FaTelegramPlane } from "react-icons/fa";
+import { FaFacebook } from "react-icons/fa";
 export default function Aloqa() {
   const TO_EMAIL = "EMAIL"; // <-- shu yerga o'zingni emailni yoz: example@gmail.com
 
@@ -110,14 +112,14 @@ ${form.message}
             <div className="cntSocials" aria-label="Social links">
               <a
                 className="cntSocial cntSocial--ig"
-                href="https://instagram.com/USERNAME"
+                href="https://instagram.com/sh_djabborova"
                 target="_blank"
                 rel="noreferrer"
               >
-                <span className="cntSocial__ico">IG</span>
+                <span className="cntSocial__ico" style={{fontSize: "25px"}} ><FaInstagram /></span>
                 <span className="cntSocial__txt">
                   <b>Instagram</b>
-                  <small>@USERNAME</small>
+                  <small>@sh_djabborova</small>
                 </span>
                 <span className="cntSocial__go">↗</span>
               </a>
@@ -128,10 +130,10 @@ ${form.message}
                 target="_blank"
                 rel="noreferrer"
               >
-                <span className="cntSocial__ico">TG</span>
+                <span className="cntSocial__ico"  style={{fontSize: "25px"}} ><FaTelegramPlane /></span>
                 <span className="cntSocial__txt">
                   <b>Telegram</b>
-                  <small>@USERNAME</small>
+                  <small>@Shaxnoza</small>
                 </span>
                 <span className="cntSocial__go">↗</span>
               </a>
@@ -142,10 +144,10 @@ ${form.message}
                 target="_blank"
                 rel="noreferrer"
               >
-                <span className="cntSocial__ico">FB</span>
+                <span className="cntSocial__ico" style={{fontSize: "25px"}}><FaFacebook /></span>
                 <span className="cntSocial__txt">
                   <b>Facebook</b>
-                  <small>/USERNAME</small>
+                  <small>Djabborova Shaxnoza</small>
                 </span>
                 <span className="cntSocial__go">↗</span>
               </a>

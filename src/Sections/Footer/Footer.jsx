@@ -6,7 +6,7 @@ export default function Footer() {
 
   return (
     <footer className="ft geometric-pattern" aria-label="Footer">
-      <div className="ft__container">
+      <div className="ft__container ">
         <div className="ft__top">
           {/* Brand */}
           <div className="ft__brand">
@@ -15,11 +15,6 @@ export default function Footer() {
               Nafis parda, yotoq to‘plami va dekor buyumlar. O‘lchamga mos tikuv,
               did bilan tanlangan matolar va zamonaviy yechimlar.
             </p>
-
-            <div className="ft__mini">
-              <span>📍 Buxoro</span>
-              <span>⏱ 1-2 kun ichida kelishuv</span>
-            </div>
           </div>
 
           {/* Links */}
@@ -48,7 +43,7 @@ export default function Footer() {
         {/* Bottom */}
         <div className="ft__bottom">
           <span className="ft__copy">© {year} NAFISAT. Barcha huquqlar himoyalangan.</span>
-          <span className="ft__made">
+          <span className="ft__madee">
             Designed By  <span className="ft__gold">Khalimov</span> <br />
             <span>Biznesingizni Biz Bilan Rivojlantiring</span>
           </span>

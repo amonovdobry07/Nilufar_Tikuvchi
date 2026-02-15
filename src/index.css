@@ -139,3 +139,34 @@ h1,h2,h3,h4,h5,h6{
 }
 
 .btn--ghost:hover { transform: translateY(-1px); background: rgba(255,255,255,0.14); }
+
+
+/* Pattern + glow */
+.pageFx{
+  position: relative;
+  isolation: isolate;
+}
+
+.pageFx::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:
+    radial-gradient(circle at 15% 10%, rgba(197,164,109,.20), transparent 55%),
+    radial-gradient(circle at 85% 20%, rgba(197,164,109,.12), transparent 55%),
+    radial-gradient(circle at 50% 90%, rgba(31,42,53,.06), transparent 60%);
+  pointer-events:none;
+  z-index:-1;
+}
+
+.pageFx::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  opacity:.22;
+  background-image:
+    repeating-linear-gradient(90deg, rgba(31,42,53,.06) 0 1px, transparent 1px 28px);
+  mask-image: radial-gradient(circle at 50% 30%, black 0 45%, transparent 70%);
+  pointer-events:none;
+  z-index:-1;
+}

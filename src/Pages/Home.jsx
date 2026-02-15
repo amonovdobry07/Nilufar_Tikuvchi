@@ -1,11 +1,37 @@
+
 import { Link } from "react-router-dom";
 import "../assets/Styles/Home.scss";
-import heroImg from "../assets/Images/Maxsulotlar/maxsulot9.jpg"; // o'sha rasm nomini shunga moslab qo'y
+import heroImg from "../assets/Images/MarketPlace/ChatGPT Image 16 февр. 2026 г., 02_23_52.png";
 
 export default function Home() {
+  const stats = [
+    { value: "1000+", label: "Buyurtmalar" },
+    { value: "17+", label: "Yil tajriba" },
+    { value: "24/7", label: "Aloqa" },
+  ];
+
+  const categories = [
+    {
+      title: "Pardalar",
+      desc: "Blackout, tyul, klassik va zamonaviy uslublar.",
+      to: "/products",
+    },
+    {
+      title: "Yostiqlar",
+      desc: "Dekorativ yostiqlar, to‘ldirish va mato variantlari.",
+      to: "/products",
+    },
+    {
+      title: "Ko‘rpa & Yotoq",
+      desc: "To‘plamlar, choyshab, ko‘rpa, qoplamalar.",
+      to: "/products",
+    },
+  ];
+
   return (
-    <main>
-      <section className="heropro" style={{ backgroundImage: `url(${heroImg})` }}>
+    <main className="home">
+      {/* HERO */}
+      <section className="heropro pageFx" style={{ backgroundImage: `url(${heroImg})` }}>
         <div className="heropro__overlay">
           <div className="container heropro__inner">
             <p className="heropro__kicker fade-up d1">BESPOKE TEXTILE ATELIER</p>
@@ -36,53 +62,87 @@ export default function Home() {
           </div>
         </div>
       </section>
-            {/* ABOUT */}
-      <section className="hsec">
-        <div className="container hsec__grid">
-          <div className="hsec__left fade-up d1">
-            <p className="hsec__kicker">2007-yildan beri</p>
-            <h2 className="hsec__title">Did bilan tanlangan matolar, aniq tikuv, sokin hashamat</h2>
-            <p className="hsec__text">
-              Biz interyerga mos pardalar, yotoq to‘plamlari va dekorativ buyumlarni buyurtma asosida tayyorlaymiz.
-              Har bir detal qo‘lda tekshiriladi: choklar, osilish, uzunlik va faktura. Natija esa uyga mos, nafis va
-              uzoq xizmat qiladigan yechim bo‘ladi.
-            </p>
 
-            <div className="hsec__stats">
-              <div className="stat">
-                <b>1000+</b>
-                <span>buyurtmalar</span>
-              </div>
-              <div className="stat">
-                <b>17+</b>
-                <span>yil tajriba</span>
+      {/* ABOUT */}
+      <section className="about pageFx">
+        <div className="container">
+          <div className="about__grid">
+            <div className="about__left fade-up d1">
+              <p className="kicker">2007-yildan beri</p>
+
+              <h2 className="title">
+                Did bilan tanlangan matolar, aniq tikuv, sokin hashamat
+              </h2>
+
+              <p className="text">
+                Biz interyerga mos pardalar, yotoq to‘plamlari va dekorativ buyumlarni
+                buyurtma asosida tayyorlaymiz. Har bir detal: choklar, osilish, uzunlik
+                va faktura bo‘yicha tekshiriladi. Natija: uyga mos, nafis va uzoq xizmat
+                qiladigan yechim.
+              </p>
+
+              <div className="about__actions">
+                <Link to="/contact" className="btn btn--primary">
+                  O‘lchovga chaqirish
+                </Link>
+                <Link to="/products" className="btn btn--ghost">
+                  Katalogni ko‘rish
+                </Link>
               </div>
             </div>
+
+            <aside className="about__right fade-up d2">
+              <div className="stats">
+                {stats.map((s) => (
+                  <div className="stats__item" style={{borderRadius: "1px"}} key={s.label}>
+                    <b>{s.value}</b>
+                    <span>{s.label}</span>
+                  </div>
+                ))}
+              </div>
+
+              <div className="note" style={{borderRadius: "1px"}} >
+                <b>Sifat nazorati</b>
+                <p>
+                  Material tanlovi → tikuv → yakuniy tekshiruv.
+                  Har bosqichda aniqlik va tozalik.
+                </p>
+              </div>
+            </aside>
           </div>
         </div>
       </section>
 
       {/* CATEGORIES */}
-      <section className="hcat">
+      <section className="cats pageFx">
         <div className="container">
-          <div className="hcat__head">
-            <p className="hsec__kicker">Kolleksiya</p>
-            <h2 className="hsec__title">Eng ko‘p buyurtma qilinadigan yo‘nalishlar</h2>
+          <div className="cats__head fade-up d1">
+            <p className="kicker">Kolleksiya</p>
+            <div className="cats__row">
+              <h2 className="title">Eng ko‘p buyurtma qilinadigan yo‘nalishlar</h2>
+              <Link to="/products" className="linkAll">
+                Hammasi →
+              </Link>
+            </div>
+            <p className="text muted">
+              Keng tanlov, aniq tikuv, interyeringizga mos yechimlar.
+            </p>
           </div>
 
-          <div className="hcat__grid">
-            <a className="hcat__item" href="/products">
-              <div className="hcat__cap">Pardalar</div>
-              <p>Blackout, tyul, klassik va zamonaviy uslublar.</p>
-            </a>
-            <a className="hcat__item" href="/products">
-              <div className="hcat__cap">Yostiqlar</div>
-              <p>Dekorativ yostiqlar va to‘ldirish variantlari.</p>
-            </a>
-            <a className="hcat__item" href="/products">
-              <div className="hcat__cap">Ko‘rpa & Yotoq</div>
-              <p>To‘plamlar, choyshab, ko‘rpa, qoplamalar.</p>
-            </a>
+          <div className="cats__grid">
+            {categories.map((c) => (
+              <Link to={c.to} className="card fade-up d2" key={c.title}>
+                <div className="card__top">
+                  <h3 className="card__title">{c.title}</h3>
+                  <span className="card__arrow">↗</span>
+                </div>
+                <p className="card__desc">{c.desc}</p>
+                <div className="card__meta">
+                  <span className="pill">Buyurtma asosida</span>
+                  <span className="pill pill--gold">Premium</span>
+                </div>
+              </Link>
+            ))}
           </div>
         </div>
       </section>
