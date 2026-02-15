@@ -159,7 +159,7 @@ ${form.message}
                 title="NAFISAT location"
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
-                src="https://www.google.com/maps?q=Bukhara&output=embed"
+                src="https://www.google.com/maps/embed?pb=!1m13!1m8!1m3!1d6132.3670134372605!2d64.411892!3d39.780437!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMznCsDQ2JzQ5LjYiTiA2NMKwMjQnNDIuOCJF!5e0!3m2!1sru!2s!4v1771195710101!5m2!1sru!2s"
               />
             </div>
           </aside>
