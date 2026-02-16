@@ -126,7 +126,7 @@ ${form.message}
 
               <a
                 className="cntSocial cntSocial--tg"
-                href="https://t.me/USERNAME"
+                href="https://t.me/Shaxi_564"
                 target="_blank"
                 rel="noreferrer"
               >

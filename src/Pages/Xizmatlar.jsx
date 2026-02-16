@@ -90,10 +90,10 @@ export default function Xizmatlar() {
             </div>
 
             <div className="srvCta__actions">
-              <a className="srvBtn srvBtn--gold" href="tel:+998901234567">
+              <a className="srvBtn srvBtn--gold" href="tel:+998904154345">
                 Qo‘ng‘iroq qilish
               </a>
-              <a className="srvBtn srvBtn--line" href="https://t.me/" target="_blank" rel="noreferrer">
+              <a className="srvBtn srvBtn--line" href="https://t.me/Shaxi_564" target="_blank" rel="noreferrer">
                 Telegramdan yozish
               </a>
             </div>
