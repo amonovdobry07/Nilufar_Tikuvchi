@@ -7,7 +7,7 @@ import wbImg from "../assets/Images/MarketPlace/wb.png";
 import ymImg from "../assets/Images/MarketPlace/yandexmarket.png";
 import uzumImg from "../assets/Images/MarketPlace/uzummarket.png";
 import tavar1 from "../assets/Images/MarketPlace/Market1.jpg"
-import tavar2 from "../assets/Images/MarketPlace/Market2.jpg"
+import tavar2 from "../assets/Images/MarketPlace/image.png"
 import tavar3 from "../assets/Images/MarketPlace/Market3.jpg"
 
 
@@ -49,21 +49,12 @@ export default function MarketPlaceSingl() {
   const PRODUCTS = {
     ozon: [
       {
-        id: "o1",
-        title: "Parda karnizi (premium)",
-        desc: "Mustahkam, zamonaviy dizayn",
-        price: "Kelishilgan narxda",
-        img: tavar1,
-        url: "https://uz.ozon.com/",
-        tag: "Pardalar",
-      },
-      {
         id: "o2",
         title: "Yotoq to‘plami (Silk Dream)",
         desc: "Tabiiy aralash mato, nafis rang",
         price: "1 250 000 so‘m",
         img: tavar2,
-        url: "https://uz.ozon.com/",
+        url: "https://uz.ozon.com/product/podushka-3537142540/?oos_search=false",
         tag: "Ko‘rpa",
       },
       {
@@ -72,27 +63,18 @@ export default function MarketPlaceSingl() {
         desc: "Yumshoq, qulay, allergiyaga mos",
         price: "390 000 so‘m",
         img: tavar3,
-        url: "https://uz.ozon.com/",
+        url: "https://uz.ozon.com/product/podushka-3537094809/?abt_att=1&oos_search=false",
         tag: "Yostiqlar",
       },
     ],
     wildberries: [
-      {
-        id: "w1",
-        title: "Qalin parda (Classic Gold)",
-        desc: "Og‘ir tushadigan, interyerga mos",
-        price: "Kelishilgan narxda",
-        img: tavar1,
-        url: "https://www.wildberries.ru/",
-        tag: "Pardalar",
-      },
       {
         id: "w2",
         title: "Tyul (Elegant Lace)",
         desc: "Nozik to‘r, chiroyli tushish",
         price: "Kelishilgan narxda",
         img: tavar2,
-        url: "https://www.wildberries.ru/",
+        url: "https://www.wildberries.ru/catalog/832173757/detail.aspx?targetUrl=GP",
         tag: "Pardalar",
       },
       {
@@ -101,27 +83,19 @@ export default function MarketPlaceSingl() {
         desc: "Premium ko‘rinish, nafis dizayn",
         price: "1 480 000 so‘m",
         img: tavar3,
-        url: "https://www.wildberries.ru/",
+        url: "https://www.wildberries.ru/catalog/832114334/detail.aspx?targetUrl=GP",
         tag: "Ko‘rpa",
       },
     ],
     yandex: [
-      {
-        id: "y1",
-        title: "Karniz va aksessuarlar",
-        desc: "O‘rnatish uchun to‘liq to‘plam",
-        price: "Kelishilgan narxda",
-        img: tavar1,
-        url: "https://market.yandex.uz/",
-        tag: "Buyurtma asosida",
-      },
+     
       {
         id: "y2",
         title: "Dekor yostiq (Pattern)",
         desc: "Naqshli, interyerga mos",
-        price: "320 000 so‘m",
+        price: "230 000 so‘m",
         img: tavar2,
-        url: "https://market.yandex.uz/",
+        url: "https://market.yandex.uz/card/elegantnyye-dekorativnyye-podushki-valiki-v-blagorodnom-korichnevom-ottenke-stanut-izyskannym-aktsentom-v-interyere-gostinoy/5145166449?businessId=216503443&showOriginalKmEmptyOffer=1&ogV=-12",
         tag: "Yostiqlar",
       },
       {
@@ -130,27 +104,19 @@ export default function MarketPlaceSingl() {
         desc: "Mustahkam chok, yumshoq mato",
         price: "1 190 000 so‘m",
         img: tavar3,
-        url: "https://market.yandex.uz/",
+        url: "https://market.yandex.uz/card/elegantnaya-dekorativnaya-podushka-s-nezhnym-tsvetochnym-uzorom-stanet-stilnym-aktsentom-v-interyere-spalni/5145114257?businessId=216503443&showOriginalKmEmptyOffer=1&ogV=-12",
         tag: "Ko‘rpa",
       },
     ],
     uzum: [
-      {
-        id: "u1",
-        title: "Parda (Modern Beige)",
-        desc: "Minimal, nafis, yumshoq rang",
-        price: "Kelishilgan narxda",
-        img: tavar1,
-        url: "https://uzum.uz/",
-        tag: "Pardalar",
-      },
+
       {
         id: "u2",
         title: "Yostiqlar (Comfort Set)",
         desc: "Uxlash uchun ideal to‘plam",
-        price: "420 000 so‘m",
+        price: "230 000 so‘m",
         img: tavar2,
-        url: "https://uzum.uz/",
+        url: "https://uzum.uz/uz/product/hashamatli-dekorativ-yostiqlar-valik-shaklida-2418459?skuId=8689971",
         tag: "Yostiqlar",
       },
       {
@@ -159,7 +125,7 @@ export default function MarketPlaceSingl() {
         desc: "O‘lchamga mos tikuv xizmati",
         price: "Kelishilgan narxda",
         img: tavar3,
-        url: "https://uzum.uz/",
+        url: "https://uzum.uz/uz/product/dekorativ-yostiqcha-40-50-sm-gul-2417346",
         tag: "Buyurtma asosida",
       },
     ],

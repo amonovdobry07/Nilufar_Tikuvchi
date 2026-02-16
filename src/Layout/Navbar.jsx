@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import "../assets/Styles/Navbar.scss";
+import logo from "../assets/Images/Logo/ChatGPT Image 17 февр. 2026 г., 00_24_29.png"
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
@@ -23,7 +24,7 @@ export default function Navbar() {
       <header className={`navlux ${scrolled ? "navlux--scrolled" : ""}`}>
         <div className="container navlux__inner">
           <Link to="/" className="navlux__logo" aria-label="NAFISAT home">
-            NAFISAT
+              <img src={logo} alt="" />
           </Link>
 
           <nav className="navlux__links" aria-label="Navigation">
