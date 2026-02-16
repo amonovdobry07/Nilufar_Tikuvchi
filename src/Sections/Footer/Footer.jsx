@@ -10,7 +10,7 @@ export default function Footer() {
         <div className="ft__top">
           {/* Brand */}
           <div className="ft__brand">
-            <div className="ft__logo">NAFISAT</div>
+            <div className="ft__logo">Favvora Dekor</div>
             <p className="ft__desc">
               Nafis parda, yotoq to‘plami va dekor buyumlar. O‘lchamga mos tikuv,
               did bilan tanlangan matolar va zamonaviy yechimlar.
@@ -42,7 +42,7 @@ export default function Footer() {
 
         {/* Bottom */}
         <div className="ft__bottom">
-          <span className="ft__copy">© {year} NAFISAT. Barcha huquqlar himoyalangan.</span>
+          <span className="ft__copy">© {year} Favvora Devor. Barcha huquqlar himoyalangan.</span>
           <span className="ft__madee">
             Designed By  <span className="ft__gold">Khalimov</span> <br />
             <span>Biznesingizni Biz Bilan Rivojlantiring</span>

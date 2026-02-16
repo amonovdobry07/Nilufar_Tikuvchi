@@ -8,6 +8,11 @@ import bedding1 from "../assets/Images/Maxsulotlar/maxsulot8.jpg";
 import pillow1 from "../assets/Images/Maxsulotlar/maxsulot3.jpg";
 import blanket1 from "../assets/Images/Maxsulotlar/maxsulot4.jpg";
 import custom1 from "../assets/Images/Maxsulotlar/maxsulot5.jpg";
+import yastiq1 from "../assets/Images/Maxsulotlar/maxsulot1.jpg";
+import yastiq2 from "../assets/Images/Maxsulotlar/yastiq1.jpg";
+import yastiq3 from "../assets/Images/Maxsulotlar/yastiq2.jpg";
+import yastiq4 from "../assets/Images/Maxsulotlar/yastiq3.jpg";
+import yastiq5 from "../assets/Images/Maxsulotlar/yastiq4.jpg";
 
 export default function ProductsPage() {
   const CATEGORIES = [
@@ -38,7 +43,7 @@ export default function ProductsPage() {
       id: "suzani-yostiq",
       name: "Suzani Bezak Yostig'i",
       description: "An'anaviy suzani naqshli dekorativ yostiqlar",
-      category: "yostiqlar",
+      category: "pardalar",
       image: pillow1,
       price: "320 000 so'm",
     },
@@ -64,6 +69,46 @@ export default function ProductsPage() {
       description: "Sizning o'lchamingizga mos maxsus parda tikish xizmati",
       category: "buyurtma",
       image: custom1,
+      price: "Kelishilgan narxda",
+    },
+    {
+      id: "buyurtma-parda",
+      name: "Buyurtma Pardalar",
+      description: "Sizning o'lchamingizga mos maxsus parda tikish xizmati",
+      category: "yostiqlar",
+      image: yastiq1,
+      price: "Kelishilgan narxda",
+    },
+      {
+      id: "buyurtma-parda",
+      name: "Buyurtma Pardalar",
+      description: "Sizning o'lchamingizga mos maxsus parda tikish xizmati",
+      category: "yostiqlar",
+      image: yastiq2,
+      price: "Kelishilgan narxda",
+    },
+      {
+      id: "buyurtma-parda",
+      name: "Buyurtma Pardalar",
+      description: "Sizning o'lchamingizga mos maxsus parda tikish xizmati",
+      category: "yostiqlar",
+      image: yastiq3,
+      price: "Kelishilgan narxda",
+    },
+      {
+      id: "buyurtma-parda",
+      name: "Buyurtma Pardalar",
+      description: "Sizning o'lchamingizga mos maxsus parda tikish xizmati",
+      category: "yostiqlar",
+      image: yastiq4,
+      price: "Kelishilgan narxda",
+    },
+      {
+      id: "buyurtma-parda",
+      name: "Buyurtma Pardalar",
+      description: "Sizning o'lchamingizga mos maxsus parda tikish xizmati",
+      category: "yostiqlar",
+      image: yastiq5,
       price: "Kelishilgan narxda",
     },
   ];
